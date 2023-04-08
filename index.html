@@ -104,22 +104,22 @@
             var startingY = e.originalEvent.touches[0].pageY;
                 $("#container").on("touchmove", function(e) {
                     currentY = e.originalEvent.touches[0].pageY;
-                var delta = currentY - startingY;
-                var Bwidth=40;
-                var Bopacity=100;
-                var Bleft=0;
-                var Btop=0;
-                block01.style.width = Bwidth+"%";
-                block01.style.opacity=Bopacity+"%";
-                block01.style.left=Bleft;
-                block01.style.top=Btop;
+                    var delta = currentY - startingY;
+                    var Bwidth=40;
+                    var Bopacity=100;
+                    var Bleft=0;
+                    var Btop=0;
+                    block01.style.width = Bwidth+"%";
+                    block01.style.opacity=Bopacity+"%";
+                    block01.style.left=Bleft;
+                    block01.style.top=Btop;
 
-                container.ontouchstart = () =>{
-                    container.ontouchmove=(b)=>{
-                        b.delta < 0 ? Bwidth=Bwidth+5:Bwidth=Bwidth-5;
-                        b.delta < 0 ? Bopacity=Bopacity-10:Bopacity=Bopacity+10;
-                        b.delta < 0 ? Bleft=Bleft-100:Bleft=Bleft+100;
-                        b.delta < 0 ? Btop=Btop-50:Btop=Btop+50;
+                    container.ontouchstart = () =>{
+                        container.ontouchmove=(b)=>{
+                            b.delta < 0 ? Bwidth=Bwidth+5:Bwidth=Bwidth-5;
+                            b.delta < 0 ? Bopacity=Bopacity-10:Bopacity=Bopacity+10;
+                            b.delta < 0 ? Bleft=Bleft-100:Bleft=Bleft+100;
+                            b.delta < 0 ? Btop=Btop-50:Btop=Btop+50;
             }
         }
             });
