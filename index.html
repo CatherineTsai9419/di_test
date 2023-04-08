@@ -120,6 +120,18 @@
                             b.delta < 0 ? Bopacity=Bopacity-10:Bopacity=Bopacity+10;
                             b.delta < 0 ? Bleft=Bleft-100:Bleft=Bleft+100;
                             b.delta < 0 ? Btop=Btop-50:Btop=Btop+50;
+                             if (Bwidth>=40 & Bwidth<80){
+                                block01.style.width = Bwidth+"%";
+                                block01.style.opacity=Bopacity+"%";
+                                block01.style.left=Bleft+"px";
+                                block01.style.top=Btop+"px";
+
+                                };
+                            if(Bopacity<20){
+                                block01.style.display="none";
+                            }else{
+                                block01.style.display="block";
+                            };
             }
         }
             });
